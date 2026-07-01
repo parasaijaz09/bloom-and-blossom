@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Blossom 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+</html>
+<body>
+    
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading-screen">
+    <div class="loader">
+        <i class="fas fa-seedling"></i>
+        <p>Blooming...</p>
+    </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header id="navbar">
+    <div class="logo">
+        <i class="fas fa-seedling"></i>
+        <h1>Bloom & Blossom</h1>
+    </div>
+    
+    <nav>
+        <ul id="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="nav-actions">
+        <button class="search-toggle" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="wishlist-toggle" onclick="openWishlist()">
+            <i class="fas fa-heart"></i>
+            <span id="wishlist-count">0</span>
+        </button>
+        <button class="cart-toggle" onclick="openCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </button>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- ===== SEARCH BAR ===== -->
+<div id="search-overlay">
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search roses, tulips, sunflowers..." oninput="searchFlowers()">
+        <button onclick="closeSearch()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="search-results"></div>
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+    <div class="floating-flowers">
+        <i class="fas fa-seedling float-1"></i>
+        <i class="fas fa-seedling float-2"></i>
+        <i class="fas fa-seedling float-3"></i>
+        <i class="fas fa-seedling float-4"></i>
+        <i class="fas fa-seedling float-5"></i>
+    </div>
+    
+    <div class="hero-content" data-aos="fade-up">
+        <p class="hero-subtitle">Welcome to Bloom & Blossom</p>
+        <h1>Flowers speak the language<br><span>words sometimes cannot.</span></h1>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="scrollToShop()">
+                <i class="fas fa-seedling"></i> Shop Bouquets
+            </button>
+            <button class="btn-secondary" onclick="scrollToCollections()">
+                <i class="fas fa-heart"></i> Explore Collection
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURED COLLECTIONS ===== -->
+<section class="collections" id="collections" data-aos="fade-up">
+    <h2>🌸 Featured Collections</h2>
+    <p class="section-subtitle">Find the perfect bouquet for every occasion</p>
+    
+    <div class="collection-grid">
+        <div class="collection-card" onclick="filterByCategory('Birthday')">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Birthday Bouquets</h3>
+            <p>Celebrate with flowers</p>
+        </div>
+        <div class="collection-card" onclick="filterByCategory('Romantic')">
+            <i class="fas fa-heart"></i>
+            <h3>Romantic Roses</h3>
+            <p>For your special someone</p>
+        </div>
+        <div class="collection-card" onclick="filterByCategory('Sunflower')">
+            <i class="fas fa-sun"></i>
+            <h3>Sunflower Collection</h3>
+            <p>Bring sunshine home</p>
+        </div>
+        <div class="collection-card" onclick="filterByCategory('Tulip')">
+            <i class="fas fa-tint"></i>
+            <h3>Elegant Tulips</h3>
+            <p>Spring in a bouquet</p>
+        </div>
+        <div class="collection-card" onclick="filterByCategory('White')">
+            <i class="fas fa-star"></i>
+            <h3>White Elegance</h3>
+            <p>Pure & timeless</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="categories" id="categories" data-aos="fade-up">
+    <h2>🌿 Shop by Category</h2>
+    <p class="section-subtitle">Find your favorite flowers</p>
+    
+    <div class="category-grid">
+        <div class="category-item" onclick="filterByCategory('Rose')">
+            <span>🌹</span>
+            <p>Roses</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Tulip')">
+            <span>🌷</span>
+            <p>Tulips</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Lily')">
+            <span>🌸</span>
+            <p>Lilies</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Orchid')">
+            <span>🦋</span>
+            <p>Orchids</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Sunflower')">
+            <span>🌻</span>
+            <p>Sunflowers</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Mixed')">
+            <span>💐</span>
+            <p>Mixed Bouquets</p>
+        </div>
+        <div class="category-item" onclick="filterByCategory('Plant')">
+            <span>🌿</span>
+            <p>Indoor Plants</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRODUCT SHOP ===== -->
+<section class="shop" id="shop">
+    <div class="shop-header">
+        <h2>🌸 Our Collection</h2>
+        <div class="shop-controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" onclick="filterProducts('popular')">⭐ Best Sellers</button>
+                <button class="filter-btn" onclick="filterProducts('seasonal')">🌿 Seasonal</button>
+            </div>
+            <select id="sort-select" onchange="sortProducts()">
+                <option value="default">Sort by</option>
+                <option value="price-low">Price: Low → High</option>
+                <option value="price-high">Price: High → Low</option>
+                <option value="name">Name: A → Z</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="product-grid" id="product-grid">
+        <!-- Products loaded by JavaScript -->
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-choose" data-aos="fade-up">
+    <h2>🌸 Why Choose Us</h2>
+    <div class="features-grid">
+        <div class="feature" data-aos="zoom-in">
+            <i class="fas fa-truck"></i>
+            <h3>Same Day Delivery</h3>
+            <p>Fresh flowers at your doorstep</p>
+        </div>
+        <div class="feature" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-leaf"></i>
+            <h3>Fresh Flowers</h3>
+            <p>Directly from local farms</p>
+        </div>
+        <div class="feature" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-gift"></i>
+            <h3>Elegant Packaging</h3>
+            <p>Beautifully wrapped with love</p>
+        </div>
+        <div class="feature" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Handmade Bouquets</h3>
+            <p>Arranged with care</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" data-aos="fade-up">
+    <h2>💬 What Our Customers Say</h2>
+    <div class="testimonial-grid" id="testimonial-grid">
+        <!-- Loaded by JavaScript -->
+    </div>
+</section>
+
+<!-- ===== FLOWER STORIES ===== -->
+<section class="flower-stories" data-aos="fade-up">
+    <h2>📖 Every Flower Tells a Story</h2>
+    <p class="section-subtitle">Click a flower to discover its meaning</p>
+    
+    <div class="story-grid" id="story-grid">
+        <!-- Loaded by JavaScript -->
+    </div>
+</section>
+
+<!-- ===== INSTAGRAM GALLERY ===== -->
+<section class="instagram-gallery" data-aos="fade-up">
+    <h2>📷 Follow Our Blooms</h2>
+    <p class="section-subtitle">@bloomandblossom</p>
+    
+    <div class="ig-grid" id="ig-grid">
+        <!-- Loaded by JavaScript -->
+    </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter" data-aos="fade-up">
+    <div class="newsletter-content">
+        <h2>🌸 Receive Blooming Updates</h2>
+        <p>Subscribe for exclusive offers, new arrivals, and floral inspiration</p>
+        <div class="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email">
+            <button onclick="subscribeNewsletter()">
+                <i class="fas fa-paper-plane"></i> Subscribe
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about" data-aos="fade-up">
+    <h2>👩 About Bloom & Blossom</h2>
+    <div class="about-content">
+        <p>Since 2010, we've been spreading joy through the language of flowers. Every bouquet is handcrafted with love, using the freshest blooms from local sustainable farms. We believe flowers have the power to heal, inspire, and connect us all.</p>
+        <div class="about-stats">
+            <div class="stat">
+                <span>15+</span>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat">
+                <span>50K+</span>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+                <span>100%</span>
+                <p>Fresh Flowers</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact" data-aos="fade-up">
+    <h2>📞 Get in Touch</h2>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +92 3126785438 </p>
+            <p><i class="fas fa-envelope"></i> hello@bloomandblossom.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Garden Lane, Flower City</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <form class="contact-form" onsubmit="submitContact(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+        </form>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h2><i class="fas fa-seedling"></i> Bloom & Blossom</h2>
+            <p>Spreading joy through flowers since 2010</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-phone"></i> +92 3126785438 </p>
+            <p><i class="fas fa-envelope"></i> hello@bloomandblossom.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Bloom & Blossom • Designed by Paras Aijaz</p>
+    </div>
+</footer>
+
+<!-- ===== WISHLIST SIDEBAR ===== -->
+<div id="wishlist-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>❤️ My Wishlist</h2>
+        <button onclick="closeWishlist()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="wishlist-items" class="sidebar-items">
+        <!-- Loaded by JavaScript -->
+    </div>
+</div>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div id="cart-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>🛒 My Cart</h2>
+        <button onclick="closeCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="cart-items" class="sidebar-items">
+        <!-- Loaded by JavaScript -->
+    </div>
+    <div class="cart-total" id="cart-total">
+        <!-- Loaded by JavaScript -->
+    </div>
+</div>
+
+<!-- ===== QUICK VIEW MODAL ===== -->
+<div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+        <div id="modal-body">
+            <!-- Loaded by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- ===== TOAST NOTIFICATION ===== -->
+<div id="toast" class="toast"></div>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
