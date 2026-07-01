@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌸 Bloom & Blossom
+# Bloom & Blossom 🌸
 
 ### A Modern & Elegant Flower Shop Website
 
@@ -44,39 +44,44 @@ Every section was carefully designed with consistency, aesthetics, and usability
 
 # 🖼️ Project Preview
 
-## 🏡 Homepage
+## Homepage
 
 <img src="blossoms_gallery/homepage.PNG"/>
 
 ---
 
-## 🛍️ Products
+## Products
 
 <img src="blossoms_gallery/products.PNG"/>
 
 ---
 
-## 👁️ Quick View
+## Quick View
 
 <img src="blossoms_gallery/quick-view.PNG"/>
 
 ---
 
-## 🛒 Shopping Cart
+## Shopping Cart
 
 <img src="blossoms_gallery/cart.PNG"/>
 
 ---
 
-## ❤️ Wishlist
+## Wishlist
 
 <img src="blossoms_gallery/wishlist.PNG"/>
 
 ---
 
-## 🔍 Search
+## Search
 
 <img src="blossoms_gallery/search.jpg"/>
+
+---
+## Dark Mode
+
+<img src="blossoms_gallery/dark-mode.PNG"/>
 
 ---
 
@@ -85,6 +90,7 @@ Every section was carefully designed with consistency, aesthetics, and usability
 <img src="blossoms_gallery/homepage-mobile.jpg" width="300"/>
 <img src="blossoms_gallery/products-mobile.jpg" width="300"/>
 <img src="blossoms_gallery/cart-mobile.jpg" width="300"/>
+<img src="blossoms_gallery/hamburger-mobile.jpg" width="300"/>
 
 ---
 
