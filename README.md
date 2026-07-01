@@ -88,9 +88,10 @@ Every section was carefully designed with consistency, aesthetics, and usability
 ## 📱 Mobile Responsive Design
 
 <img src="blossoms_gallery/homepage-mobile.jpg" width="300"/>
-<img src="blossoms_gallery/products-mobile.jpg" width="300"/>
 <img src="blossoms_gallery/cart-mobile.jpg" width="300"/>
-<img src="blossoms_gallery/hamburger-mobile.jpg" width="300"/>
+<img src="blossoms_gallery/carts-mobile.jpg" width="300"/>
+<img src="blossoms_gallery/featured-collection.jpg" width="300"/>
+<img src="blossoms_gallery/contactus-mobile.jpg" width="300"/>
 
 ---
 
